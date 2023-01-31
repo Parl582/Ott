@@ -1,15 +1,16 @@
 import React from "react";
 
 const Movies = ({ elm }) => {
-  // console.log("single movies", elm);
-
+  const ViewDetails = () => {};
   const handlePlay = () => {};
+  const handleList = () => {};
 
   return (
     <>
       <div className="md:min-w-[310px] min-w-[210px]  movies_card relative cursor-pointer overflow-hidden rounded-sm p-2 ">
         <div className="movie_hover relative">
           <img
+            onClick={ViewDetails}
             src={elm?.jawSummary?.backgroundImage?.url}
             alt=""
             className="w-full md:h-[200px] h-[180px] object-cover object rounded-sm "
@@ -30,7 +31,10 @@ const Movies = ({ elm }) => {
                 <span className="material-symbols-outlined">play_circle</span>
                 <span className=" text-[0.8rem]">Watch</span>
               </button>
-              <button className=" text-white flex items-center   px-4 space-x-1 border-2 md:py-[2px] border-[#b0b0b0]  rounded-sm  md:w-auto w-full justify-center">
+              <button
+                className=" text-white flex items-center   px-4 space-x-1 border-2 md:py-[2px] border-[#b0b0b0]  rounded-sm  md:w-auto w-full justify-center"
+                onClick={handleList}
+              >
                 <span className="material-symbols-outlined">add</span>
                 <span className="font-thin text-[0.8rem]">Favorite</span>
               </button>

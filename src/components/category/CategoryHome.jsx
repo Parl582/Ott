@@ -1,19 +1,18 @@
 import React, { useRef } from "react";
 import Movies from "../singleMovie/Movies";
 
-const CategoryHome = ({ data }) => {
+const CategoryHome = ({ data,catName }) => {
   const ref = useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
-
 
   return (
     <>
       <div className="w-full text-white  relative cat_scroll_hide">
         {/* categoryName */}
         <span className="flex items-center space-x-1">
-          <h2 className="font-bold text-[1.8rem] rounded-sm ">You Watch</h2>
+          <h2 className="font-bold text-[1.8rem] rounded-sm "> {catName}</h2>
           <span className="material-symbols-outlined mt-1 font-bold">
             chevron_right
           </span>
