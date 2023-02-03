@@ -1,5 +1,6 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import logo from '../../IMG/logo.jpg'
 
 const Header = () => {
   return (
@@ -7,7 +8,9 @@ const Header = () => {
       <header className="flex items-center w-[full h-[50px] sticky top-0 z-40 ">
         <div className="w-full h-full flex items-center justify-between md:px-[50px] px-3 text-white bg-transparent header_shoadows">
           <div className="flex items-center space-x-6">
-            <div>myLogo</div>
+            <Link to="/" className="w-[100px] cursor-pointer">
+             MovieClone
+            </Link>
             <div className="cursor-pointer flex items-center ">
               <span>Category</span>
 
