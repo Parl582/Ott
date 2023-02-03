@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Movies from "../singleMovie/Movies";
 
 const CategoryHome = ({ data, catName }) => {
@@ -6,6 +6,17 @@ const CategoryHome = ({ data, catName }) => {
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
+
+  useEffect(() => {
+    const ScrollTo = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    };
+    ScrollTo();
+  }, []);
 
   return (
     <>
@@ -31,7 +42,7 @@ const CategoryHome = ({ data, catName }) => {
             <Movies elm={elm} key={elm?.id} />
           ))}
         </div>
-        <div className="absolute flex justify-between w-[100%] center_absolute">
+        <div className="absolute  justify-between w-[100%] center_absolute md:flex hidden">
           <button
             onClick={() => scroll(-500)}
             className="w-[50px] h-[50px] rounded-full bg-transparent border-2 flex items-center justify-center"

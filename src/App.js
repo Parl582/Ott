@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/footer/Footer";
@@ -42,9 +43,12 @@ function App() {
       element: <Player />,
     },
   ]);
+
+
+
   return (
     <>
-      <div className="bg-black w-full h-[calc-(100vh-50px)]">
+      <div className="bg-[#1a1a1a] w-full h-[calc-(100vh-50px)]">
         {/* <Homepage /> */}
         <RouterProvider router={router} />
       </div>
