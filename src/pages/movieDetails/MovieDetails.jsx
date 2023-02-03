@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AdsPortions from "../../components/ads/AdsPotions";
 import LabTabs from "./Tabs";
@@ -6,7 +6,17 @@ import LabTabs from "./Tabs";
 const MovieDetails = () => {
   let location = useLocation();
   const details = location.state;
-  console.log(location.state);
+  useEffect(() => {
+    const ScrollTo = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    };
+    ScrollTo();
+  }, []);
+
   return (
     <>
       <div className="w-fill h-[calc-(100vh-80px)]">

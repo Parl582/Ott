@@ -45,6 +45,10 @@
     transform: scale(1.2);
     .hover_show_details{
       opacity: 1;
+
+      @media screen and (max-width:560px){
+        display: none;
+      }
     }
   }
 }

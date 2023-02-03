@@ -10,7 +10,6 @@ const Homepage = () => {
   const horrors = [horror.titles];
   const actions = [Action.titles];
 
-  useEffect(() => {}, []);
 
   // const [nameData, setNameData] = useState({ name1: "1234", name2: "67767" });
   // const handleChange = (e) => {

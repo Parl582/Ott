@@ -1,8 +1,6 @@
-const id = crypto.randomUUID();
-
 export const NewMovies = [
   {
-    id: id,
+    id: crypto.randomUUID(),
     rating: 7.3,
     year: 2023,
     language: "Hindi",
@@ -15,24 +13,24 @@ export const NewMovies = [
     Genres: "Action, Adventure, Drama, Fantasy, Sci-FiThriller",
     mainCast: [
       {
-        id: id,
+        id: crypto.randomUUID(),
         name: "Shah Rukh Khan",
         castImg: require("../IMG/pathan/ShahRukhKhan.jfif"),
       },
       {
-        id: id,
+        id: crypto.randomUUID(),
         name: "Dipika",
         castImg: require("../IMG/pathan/dipika.webp"),
       },
       {
-        id: id,
+        id: crypto.randomUUID(),
         name: "John Abraham",
         castImg: require("../IMG/pathan/john.jfif"),
       },
     ],
   },
   {
-    id: id,
+    id: crypto.randomUUID(),
     rating: 7.3,
     year: 2023,
     language: "Hindi, English",
@@ -45,17 +43,17 @@ export const NewMovies = [
       "Queen Ramonda, Shuri, M’Baku, Okoye, and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
     mainCast: [
       {
-        id: id,
+        id: crypto.randomUUID(),
         name: "Letitia Wright",
         castImg: require("../IMG/blackpanther2023/1.jfif"),
       },
       {
-        id: id,
+        id: crypto.randomUUID(),
         name: "Lupita Nyong'o",
         castImg: require("../IMG/blackpanther2023/2.jfif"),
       },
       {
-        id: id,
+        id: crypto.randomUUID(),
         name: "Danai Gurira",
         castImg: require("../IMG/blackpanther2023/3.jfif"),
       },

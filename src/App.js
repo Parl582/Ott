@@ -49,7 +49,6 @@ function App() {
   return (
     <>
       <div className="bg-[#1a1a1a] w-full h-[calc-(100vh-50px)]">
-        {/* <Homepage /> */}
         <RouterProvider router={router} />
       </div>
     </>

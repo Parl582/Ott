@@ -16,7 +16,7 @@ const Movies = ({ elm }) => {
 
   return (
     <>
-      <div className="md:min-w-[310px] md:w-[310px] w-[210px]  min-w-[210px]  movies_card   relative cursor-pointer overflow-hidden rounded-sm p-2 ">
+      <div className="md:min-w-[310px] md:w-[310px] w-[210px]  min-w-[210px]  movies_card   relative cursor-pointer overflow-hidden rounded-sm p-2 py-3 ">
         <div className="movie_hover relative ">
           <img
             title={elm.name}
@@ -24,7 +24,7 @@ const Movies = ({ elm }) => {
             onClick={() => ViewDetails()}
             src={elm?.image}
             alt=""
-            className="w-full md:h-[200px] h-[180px] object-cover object rounded-sm "
+            className="w-full md:h-[200px] h-[210px] object-cover object rounded-sm "
           />
           <div className="absolute w-full md:h-[50%] h-[70%] bottom-0  hover_show_details  overlayer_movie_details">
             <p className="flex  px-6 items-center text-[#f8ea9b] space-x-1">

@@ -42,7 +42,7 @@ const AdsPortions = ({ movieDetails }) => {
                   {movieDetails?.mainCast.map((elm) => (
                     <div
                       className="w-[55px] rounded-sm h-[55px] overflow-hidden"
-                      key={elm?.id}
+                      key={elm.id}
                     >
                       <img
                         src={elm.castImg}
