@@ -1,24 +1,35 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Movies = ({ elm }) => {
-  const ViewDetails = () => {};
-  const handlePlay = () => {};
+  const navigate = useNavigate();
+  const ViewDetails = () => {
+    if (elm.id) {
+      navigate(`/details/${elm.id}`, { state: elm });
+    }
+  };
+  const handlePlay = () => {
+    if (elm.id) {
+      navigate(`/watch/${elm.id}`, { state: elm.url });
+    }
+  };
   const handleList = () => {};
 
   return (
     <>
-      <div className="md:min-w-[310px] min-w-[210px]  movies_card relative cursor-pointer overflow-hidden rounded-sm p-2 ">
-        <div className="movie_hover relative">
+      <div className="md:min-w-[310px] md:w-[310px] w-[210px]  min-w-[210px]  movies_card   relative cursor-pointer overflow-hidden rounded-sm p-2 ">
+        <div className="movie_hover relative ">
           <img
-            onClick={ViewDetails}
-            src={elm?.jawSummary?.backgroundImage?.url}
+            title={elm.name}
+            loading="lazy"
+            onClick={() => ViewDetails()}
+            src={elm?.image}
             alt=""
             className="w-full md:h-[200px] h-[180px] object-cover object rounded-sm "
           />
           <div className="absolute w-full md:h-[50%] h-[70%] bottom-0  hover_show_details  overlayer_movie_details">
             <p className="flex  px-6 items-center text-[#f8ea9b] space-x-1">
               <span className="material-symbols-outlined">star_half</span>
-              <span className="font-medium text-[1.5rem]">4.5 </span>
+              <span className="font-medium text-[1.5rem]">{elm.rating}</span>
               <span className="font-medium text-[0.9rem] text-white mt-1">
                 (IMdb)
               </span>
@@ -41,8 +52,14 @@ const Movies = ({ elm }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between mt-3 items-center px-2">
-          <p className="font-normal text-[1.3rem]">{elm?.jawSummary?.title} </p>
+        <div className="flex justify-between mt-3 items-center px-2 w-full">
+          {/* <p className="font-normal text-[1.3rem]">{elm?.jawSummary?.title} </p> */}
+          <p
+            className="font-normal text-[1.3rem] w-full truncate"
+            title={elm.name}
+          >
+            {elm.name}{" "}
+          </p>
           <span className="text-[#a2a2a2] text-[0.9rem]">Free</span>
         </div>
       </div>

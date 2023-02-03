@@ -37,10 +37,8 @@
 }
 .movie_hover{
   transition: all 0.3s;
-
   .hover_show_details{
     opacity: 0;
-    transition: all 0.3s;
   }
   
   &:hover{
@@ -62,4 +60,18 @@
     background: transparent;
   }
 
+}
+
+.onlyLimitedLine {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
