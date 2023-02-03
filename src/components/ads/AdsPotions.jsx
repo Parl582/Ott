@@ -1,5 +1,5 @@
 // import axios from "axios";
-import React, { useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 const AdsPortions = ({ movieDetails }) => {
@@ -8,7 +8,6 @@ const AdsPortions = ({ movieDetails }) => {
     navigate(`/watch/${movieDetails?.id}`, { state: movieDetails?.url });
   };
 
-  useEffect(() => {}, []);
 
   return (
     <>
@@ -17,7 +16,7 @@ const AdsPortions = ({ movieDetails }) => {
           <img
             src={
               movieDetails?.banner !== undefined
-                ? movieDetails.banner
+                ? movieDetails?.banner
                 : "https://6.vikiplatform.com/image/f4db244000c2470e9e1cdb608055007c.jpg?x=b&a=0x0"
             }
             alt=""
@@ -27,7 +26,7 @@ const AdsPortions = ({ movieDetails }) => {
             <div className=" h-full pt-[5%] space-y-3 w-[70%] text-white">
               <h1 className="text-white font-normal md:text-[30px] text-[1.3rem] onlyLimitedLine">
                 {movieDetails?.name !== undefined
-                  ? movieDetails.name
+                  ? movieDetails?.name
                   : "Movie Name"}
               </h1>
               <p className="text-white font-thin flex items-center space-x-2">
@@ -39,7 +38,7 @@ const AdsPortions = ({ movieDetails }) => {
               <div className="space-y-2 mb-9">
                 <span>Main Cast</span>
                 <div className="flex items-center space-x-3">
-                  {movieDetails?.mainCast.map((elm) => (
+                  {movieDetails?.mainCast?.map((elm) => (
                     <div
                       className="w-[55px] rounded-sm h-[55px] overflow-hidden"
                       key={elm.id}

@@ -79,7 +79,11 @@ export default function LabTabs({ movieDetails }) {
               </div>
             </div>
           </TabPanel>
-          <TabPanel value="2">Item Two</TabPanel>
+          <TabPanel value="2">
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-[2rem] text-white">Coming Soon</span>
+            </div>
+          </TabPanel>
         </TabContext>
       </div>
     </>
