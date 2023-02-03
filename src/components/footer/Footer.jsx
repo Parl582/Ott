@@ -44,15 +44,15 @@ function Footer() {
               <AlternateEmailOutlinedIcon fontSize="9px" /> Contact Details
             </Link>
           </div>
-          <div className="py-3 flex md:flex-none flex-wrap text-white space-x-3 border-t-2">
+          <div className="py-3 flex md:flex-none flex-wrap text-white space-x-3 border-t-2 text-center md:w-auto w-[90%] justify-center items-center">
             <Link to="#" className="flex items-center space-x-2 cursor-pointer">
-              <PrivacyTipOutlinedIcon /> Terms Of UsePrivacy
+              <PrivacyTipOutlinedIcon fontSize="10px" /> Terms Of UsePrivacy
             </Link>
             <Link to="#" className="flex items-center space-x-2 cursor-pointer">
-              <PolicyOutlinedIcon /> Policy
+              <PolicyOutlinedIcon fontSize="10px" /> Policy
             </Link>
             <Link to="#" className="flex items-center space-x-2 cursor-pointer">
-              <CopyrightOutlinedIcon /> Copyright
+              <CopyrightOutlinedIcon fontSize="10px" /> Copyright
             </Link>
           </div>
         </div>
