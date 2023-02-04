@@ -40,7 +40,7 @@ export default function LabTabs({ movieDetails }) {
           </div>
           <TabPanel value="1" className="w-full h-auto">
             <div className="flex md:flex-none flex-wrap">
-              <div className="md:w-3/4 w-full">
+              <div className="md:w-3/4 w-full ">
                 <h1 className="font-semibold text-2xl py-5"> Synopsis</h1>
                 <p className="text-[#ccc]  md:pr-9">{movieDetails.synopsis}</p>
               </div>

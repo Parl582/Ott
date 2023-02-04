@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 import { CategoryName } from "../../data/categoryName";
+
 // import logo from '../../IMG/logo.jpg'
 
 const Header = () => {
+  const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const [active, setActive] = useState(false);
   const handleCategory = (name) => {
-    console.log(name);
     setClick(!click);
   };
+  const Logout = () => {
+    localStorage.removeItem("userToken");
+    navigate("/");
+  };
+  const validation = localStorage.getItem("userToken");
   return (
     <>
       {/* <div className="w-full border-2 relative"> */}
@@ -26,22 +33,45 @@ const Header = () => {
               </span>
             </div>
           </div>
-          <div className="space-x-8 md:flex hidden">
-            <div className=" md:w-[300px]  ">
-              <input
-                type="text"
-                className="w-full px-4 py-1 rounded-full bg-transparent border-2 border-[#292929] outline-none"
-                placeholder="Search"
-              />
-            </div>
-            <button className="font-medium">Log in</button>
-            <button className="font-medium">Create Account</button>
-          </div>
-          <div className="md:hidden flex space-x-3">
-            <span className="material-symbols-outlined cursor-pointer text-[33px]">
-              search
+          {validation ? (
+            <span
+              className="material-symbols-outlined md:flex hidden cursor-pointer text-[33px]"
+              onClick={() => navigate(validation ? "/" : "/login")}
+            >
+              account_circle
             </span>
-            <span className="material-symbols-outlined cursor-pointer text-[33px]">
+          ) : (
+            <div className="space-x-8 md:flex hidden">
+              {/* <div className=" md:w-[300px]  ">
+                      <input
+                        type="text"
+                        className="w-full px-4 py-1 rounded-full bg-transparent border-2 border-[#292929] outline-none"
+                        placeholder="Search"
+                      />
+                    </div> */}
+              <button
+                className="font-medium"
+                onClick={() => navigate("/login")}
+              >
+                Log in
+              </button>
+              <button
+                className="font-medium"
+                onClick={() => navigate("/signup")}
+              >
+                Create Account
+              </button>
+            </div>
+          )}
+
+          <div className="md:hidden flex space-x-3">
+            {/* <span className="material-symbols-outlined cursor-pointer text-[33px]">
+              search
+            </span> */}
+            <span
+              className="material-symbols-outlined cursor-pointer text-[33px]"
+              onClick={() => navigate(validation ? "/" : "/login")}
+            >
               account_circle
             </span>
             <span
@@ -90,10 +120,31 @@ const Header = () => {
               ))}
             </div>
             <div className="absolute bottom-[30px] w-full">
-              <div className="w-full flex  justify-between space-x-2">
-                <button className="py-2 w-1/2  rounded-sm text-white bg-[#0c9bff] font-semibold">Login</button>
-                <button className="py-2 w-1/2 rounded-sm text-white font-semibold bg-[#3e3e3e] ">Sign up</button>
-              </div>
+              {!validation ? (
+                <div className="w-full flex  justify-between space-x-2">
+                  <button
+                    className="py-2 w-1/2  rounded-sm text-white bg-[#0c9bff] font-semibold"
+                    onClick={() => navigate("/login")}
+                  >
+                    Login
+                  </button>
+                  <button
+                    className="py-2 w-1/2 rounded-sm text-white font-semibold bg-[#3e3e3e] "
+                    onClick={() => navigate("/signup")}
+                  >
+                    Sign up
+                  </button>
+                </div>
+              ) : (
+                <div className="">
+                  <button
+                    className="py-2 w-full  rounded-sm text-white bg-[#0c9bff] font-semibold"
+                    onClick={() => Logout()}
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const MovieDetails = () => {
       <div className="w-fill h-[calc-(100vh-80px)]">
         <AdsPortions movieDetails={details} />
         <div className="w-full md:min-h-[calc(100vh-500px)] min-h-[calc(100vh-320px)] bg-[black] py-4 flex justify-center">
-          <div className="md:w-[70%] w-[90%] text-white ">
+          <div className="md:w-[70%] w-[95%] text-white ">
             <LabTabs movieDetails={details} />
           </div>
         </div>

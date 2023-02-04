@@ -1,11 +1,13 @@
-import { useEffect } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Homepage from "./components/homePage/Homepage";
+import ErrorPage from "./pages/error/ErrorPage";
+import Login from "./pages/login/LogIn";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
 import Player from "./pages/player/Player";
+import SignUp from "./pages/signup/SignUp";
 import ViewAllMovies from "./pages/viewall/ViewAllMovies";
 
 function App() {
@@ -42,9 +44,19 @@ function App() {
       path: "/watch/:id",
       element: <Player />,
     },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/signup",
+      element: <SignUp />,
+    },
+    {
+      path: "/*",
+      element: <ErrorPage />,
+    },
   ]);
-
-
 
   return (
     <>
