@@ -32,7 +32,7 @@ export default function LabTabs({ movieDetails }) {
               onChange={handleChange}
               className="flex items-center justify-between w-full "
             >
-              {movieDetails.sessions && (
+              {movieDetails?.sessions && (
                 <Tab
                   label="Episodes & Session"
                   value="3"
@@ -42,12 +42,16 @@ export default function LabTabs({ movieDetails }) {
               <Tab
                 label="About"
                 value="1"
-                className="!w-1/2 border-2  !text-white font-bold "
+                className={`${
+                  movieDetails?.sessions ? "w-1/3" : "!w-1/2 border-2"
+                }  !text-white font-bold `}
               />
               <Tab
                 label="Comments"
                 value="2"
-                className="!w-1/2 border-2 !text-white"
+                className={`${
+                  movieDetails?.sessions ? "w-1/3" : "!w-1/2 border-2"
+                }  !text-white font-bold `}
               />
             </TabList>
           </div>
@@ -55,7 +59,7 @@ export default function LabTabs({ movieDetails }) {
             <div className="flex md:flex-none flex-wrap">
               <div className="md:w-3/4 w-full ">
                 <h1 className="font-semibold text-2xl py-5"> Synopsis</h1>
-                <p className="text-[#ccc]  md:pr-9">{movieDetails.synopsis}</p>
+                <p className="text-[#ccc]  md:pr-9">{movieDetails?.synopsis}</p>
               </div>
               <div className="md:w-1/4 w-full ">
                 <span className="font-semibold text-2xl py-5 flex items-center space-x-2">
@@ -97,37 +101,39 @@ export default function LabTabs({ movieDetails }) {
               <span className="text-[2rem] text-white">Coming Soon</span>
             </div>
           </TabPanel>
-          <TabPanel value="3">
-            <div className="w-full h-full ">
-              <select
-                className="w-[40%] bg-[#000] py-2 px-1 border-[1px] border-[#383838]"
-                onChange={(e) => setSession(e.target.value)}
-              >
-                {movieDetails?.sessions?.map((elm, index) => (
-                  <option value={index} key={elm.id}>
-                    {elm.sNo}
-                  </option>
-                ))}
-              </select>
-              <div className="flex flex-wrap w-full py-2">
-                {movieDetails?.sessions[sessionNo]?.episodes.map(
-                  (item, index) => (
-                    <div
-                      className="p-1 min-w-[10%] w-[10%] flex items-center justify-center "
-                      key={item.id}
-                    >
-                      <span
-                        className="w-full border-2  text-center cursor-pointer hover:text-[#000] rounded-sm hover:bg-[#ccc]"
-                        onClick={() => handlePlay(item)}
+          {movieDetails?.sessions && (
+            <TabPanel value="3">
+              <div className="w-full h-full ">
+                <select
+                  className="w-[40%] bg-[#000] py-2 px-1 border-[1px] border-[#383838]"
+                  onChange={(e) => setSession(e.target.value)}
+                >
+                  {movieDetails?.sessions?.map((elm, index) => (
+                    <option value={index} key={elm?.id}>
+                      {elm?.sNo}
+                    </option>
+                  ))}
+                </select>
+                <div className="flex flex-wrap w-full py-2">
+                  {movieDetails?.sessions[sessionNo]?.episodes?.map(
+                    (item, index) => (
+                      <div
+                        className="p-1 md:min-w-[10%] w-1/5 md:w-[10%] w-1/5 flex items-center justify-center "
+                        key={item?.id}
                       >
-                        Ep {index + 1}
-                      </span>
-                    </div>
-                  )
-                )}
+                        <span
+                          className="w-full border-2  text-center cursor-pointer hover:text-[#000] rounded-sm hover:bg-[#ccc]"
+                          onClick={() => handlePlay(item)}
+                        >
+                          Ep {index + 1}
+                        </span>
+                      </div>
+                    )
+                  )}
+                </div>
               </div>
-            </div>
-          </TabPanel>
+            </TabPanel>
+          )}
         </TabContext>
       </div>
     </>
