@@ -1,18 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
-import PersonAdd from "@mui/icons-material/PersonAdd";
-import Settings from "@mui/icons-material/Settings";
-import Logout from "@mui/icons-material/Logout";
 import { CategoryName } from "../../data/categoryName";
-
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -86,7 +78,11 @@ export default function AccountMenu() {
           <div className="w-full flex items-center justify-center">
             <div className="w-[90%] flex flex-wrap lg:p-4">
               {CategoryName.map((elm) => (
-                <div className="w-1/2 lg:p-5 p-2  md:h-[140px] h-[80px] " key={elm.id}  onClick={handleClose}>
+                <div
+                  className="w-1/2 lg:p-5 p-2  md:h-[140px] h-[80px] "
+                  key={elm.id}
+                  onClick={handleClose}
+                >
                   <div className="border-[1px] border-[#434343] w-full h-full  relative rounded-md overflow-hidden">
                     <img
                       src={elm.img}

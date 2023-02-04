@@ -16,15 +16,15 @@ function Footer() {
       <div className="w-full md:h-[300px]  py-4 flex items-center justify-center">
         <div className="w-[90%] rounded-lg h-full flex items-center justify-center flex-col bg-[#1f1f1f] py-5">
           <div className="flex  space-x-4">
-            <a href="#" className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden flex items-center justify-center cursor-pointer">
+            <div className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden flex items-center justify-center cursor-pointer">
               <FacebookRoundedIcon className="text-[#fff] !text-[40px]" />
-            </a>
-            <a  href="#" className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden flex items-center justify-center cursor-pointer">
+            </div>
+            <div className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden flex items-center justify-center cursor-pointer">
               <Twitter className="text-[#fff] !text-[35px]" />
-            </a>
-            <a  href="#" className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden flex items-center justify-center cursor-pointer">
+            </div>
+            <div className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden flex items-center justify-center cursor-pointer">
               <Telegram className="text-[#fff] !text-[35px]" />
-            </a>
+            </div>
           </div>
 
           <div className="py-3 flex md:flex-none flex-wrap text-white space-x-3 items-center w-full justify-center ">
