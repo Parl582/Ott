@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 import { CategoryName } from "../../data/categoryName";
+import AccountMenu from "./CategoryData";
 
 // import logo from '../../IMG/logo.jpg'
 
@@ -27,10 +28,7 @@ const Header = () => {
               FlixTv
             </Link>
             <div className="cursor-pointer md:flex hidden items-center ">
-              <span>Category</span>
-              <span className="material-symbols-outlined mt-1">
-                expand_more
-              </span>
+              <AccountMenu />
             </div>
           </div>
           {validation ? (
@@ -105,17 +103,28 @@ const Header = () => {
               </div>
             </div>
             <div
-              className={`w-full  overflow-hidden ${
+              className={`w-[80%] flex flex-wrap overflow-y-auto p-2 ${
                 active ? "h-[auto]" : "h-[0]"
               } `}
             >
               {CategoryName?.map((elm) => (
                 <li
-                  className="list-none flex items-center space-x-2 py-2 px-2"
+                  className="list-none flex items-center space-x-2 py-2 px-2  w-1/3 min-w-[90px] h-[100px] "
                   key={elm.id}
                   onClick={() => handleCategory(elm.name)}
                 >
-                  <span>{elm.name} </span>
+                  <div className="w-full border-[1px] border-[#474747] rounded-md h-full relative">
+                    <img
+                      src={elm.img}
+                      alt=""
+                      className="w-full h-full opacity-95 object-cover p-1 rounded-md"
+                    />
+                    <div className="absolute bottom-0  w-full pb-3 overlayer_movie_details">
+                      <div className="w-full text-center text-[0.8rem] truncate text-white font-bold">
+                        {elm.name}
+                      </div>
+                    </div>
+                  </div>
                 </li>
               ))}
             </div>
