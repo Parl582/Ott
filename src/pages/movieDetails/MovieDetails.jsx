@@ -5,6 +5,7 @@ import LabTabs from "./Tabs";
 
 const MovieDetails = () => {
   let location = useLocation();
+
   const details = location.state;
   useEffect(() => {
     const ScrollTo = () => {
@@ -26,7 +27,6 @@ const MovieDetails = () => {
             <LabTabs movieDetails={details} />
           </div>
         </div>
-      
       </div>
     </>
   );

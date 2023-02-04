@@ -9,7 +9,11 @@ const Movies = ({ elm }) => {
   };
   const handlePlay = () => {
     if (elm.id) {
-      navigate(`/watch/${elm.id}`, { state: elm.url });
+      if (elm.sessions) {
+        navigate(`/details/${elm.id}`, { state: elm });
+      } else {
+        navigate(`/watch/${elm.id}`, { state: elm.url });
+      }
     }
   };
   const handleList = () => {};

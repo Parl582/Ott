@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 const AdsPortions = ({ movieDetails }) => {
   const navigate = useNavigate();
   const handlePlay = () => {
-    navigate(`/watch/${movieDetails?.id}`, { state: movieDetails?.url });
+    if (movieDetails?.url) {
+      navigate(`/watch/${movieDetails?.id}`, { state: movieDetails?.url });
+    }
   };
-
 
   return (
     <>
@@ -30,9 +31,15 @@ const AdsPortions = ({ movieDetails }) => {
                   : "Movie Name"}
               </h1>
               <p className="text-white font-thin flex items-center space-x-2">
-                <span className="px-3  bg-[#02161a] rounded-sm"> {movieDetails?.year} </span>
+                <span className="px-3  bg-[#02161a] rounded-sm">
+                  {" "}
+                  {movieDetails?.year}{" "}
+                </span>
                 <span>|</span>
-                <span className="px-3  bg-[#021316] rounded-sm"> {movieDetails?.language} </span>
+                <span className="px-3  bg-[#021316] rounded-sm">
+                  {" "}
+                  {movieDetails?.language}{" "}
+                </span>
               </p>
 
               <div className="space-y-2 mb-9">

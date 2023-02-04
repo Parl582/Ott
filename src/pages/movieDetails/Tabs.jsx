@@ -4,13 +4,24 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
+import { useNavigate } from "react-router-dom";
 
 export default function LabTabs({ movieDetails }) {
   const [value, setValue] = React.useState("1");
+  const [sessionNo, setSession] = React.useState(0);
+  const navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const handlePlay = (data) => {
+    if (data.url) {
+      navigate(`/watch/${data?.id}`, { state: data?.url });
+    }
+  };
+
+  React.useEffect(() => {}, [sessionNo]);
 
   return (
     <>
@@ -21,6 +32,13 @@ export default function LabTabs({ movieDetails }) {
               onChange={handleChange}
               className="flex items-center justify-between w-full "
             >
+              {movieDetails.sessions && (
+                <Tab
+                  label="Episodes & Session"
+                  value="3"
+                  className="!w-1/3 border-2  !text-white"
+                />
+              )}
               <Tab
                 label="About"
                 value="1"
@@ -31,11 +49,6 @@ export default function LabTabs({ movieDetails }) {
                 value="2"
                 className="!w-1/2 border-2 !text-white"
               />
-              {/* <Tab
-                label="Related"
-                value="3"
-                className="!w-1/3 border-2 !border-red-600 !text-white"
-              /> */}
             </TabList>
           </div>
           <TabPanel value="1" className="w-full h-auto">
@@ -71,7 +84,7 @@ export default function LabTabs({ movieDetails }) {
                     <p>
                       <span className="font-medium">Language</span>
                       <p className="text-[0.8rem] text-[#acacac]">
-                        {movieDetails.language}{" "}
+                        {movieDetails.language}
                       </p>
                     </p>
                   </div>
@@ -82,6 +95,37 @@ export default function LabTabs({ movieDetails }) {
           <TabPanel value="2">
             <div className="w-full h-full flex items-center justify-center">
               <span className="text-[2rem] text-white">Coming Soon</span>
+            </div>
+          </TabPanel>
+          <TabPanel value="3">
+            <div className="w-full h-full ">
+              <select
+                className="w-[40%] bg-[#000] py-2 px-1 border-[1px] border-[#383838]"
+                onChange={(e) => setSession(e.target.value)}
+              >
+                {movieDetails?.sessions?.map((elm, index) => (
+                  <option value={index} key={elm.id}>
+                    {elm.sNo}
+                  </option>
+                ))}
+              </select>
+              <div className="flex flex-wrap w-full py-2">
+                {movieDetails?.sessions[sessionNo]?.episodes.map(
+                  (item, index) => (
+                    <div
+                      className="p-1 min-w-[10%] w-[10%] flex items-center justify-center "
+                      key={item.id}
+                    >
+                      <span
+                        className="w-full border-2  text-center cursor-pointer hover:text-[#000] rounded-sm hover:bg-[#ccc]"
+                        onClick={() => handlePlay(item)}
+                      >
+                        Ep {index + 1}
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
             </div>
           </TabPanel>
         </TabContext>

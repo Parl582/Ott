@@ -10,6 +10,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const [active, setActive] = useState(false);
+
   const handleCategory = (name) => {
     setClick(!click);
   };
