@@ -118,7 +118,7 @@ export default function LabTabs({ movieDetails }) {
                   {movieDetails?.sessions[sessionNo]?.episodes?.map(
                     (item, index) => (
                       <div
-                        className="p-1 md:min-w-[10%] w-1/5 md:w-[10%] w-1/5 flex items-center justify-center "
+                        className="p-1 md:min-w-[10%] min-w-1/5 md:w-[10%] w-1/5 flex items-center justify-center "
                         key={item?.id}
                       >
                         <span
