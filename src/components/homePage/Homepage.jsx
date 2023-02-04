@@ -20,12 +20,12 @@ const Homepage = () => {
         <div className="w-full  md:px-[70px] px-4 ">
           <CategoryHome data={Movies} catName="Movies" />
         </div>
-        <div className="w-full  md:px-[70px] px-4 ">
+        {/* <div className="w-full  md:px-[70px] px-4 ">
           <CategoryHome data={actions[0]} catName={"Drama"} />
         </div>
         <div className="w-full  md:px-[70px] px-4 ">
           <CategoryHome data={actions[0]} catName={"Anime"} />
-        </div>
+        </div> */}
       </div>
     </>
   );
