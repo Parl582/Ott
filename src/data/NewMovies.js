@@ -10,7 +10,7 @@ export const NewMovies = [
     url: "https://adblocktape.store/v/7DblOpk2M6s8O4/%5BAllMoviesHub.Day%5D-Pathaan.2023.V3.480p.HQ.HDCAM.Hindi.DD.2.0.x264.mkv.mp4",
     synopsis:
       " Shah Rukh Khan will portray a RAW agent, while Deepika Padukone will portray a police officer in the movie. Watching the characters come to life on the big screen will be incredible. Hindi, Telugu, and Tamil versions of the classic pursuit between police and criminal will be available. After a lengthy period, we will finally witness King Khan on the big screen.",
-    Genres: "Action, Adventure, Drama, Fantasy, Sci-FiThriller",
+    Genres: "Action, Thriller",
     mainCast: [
       {
         id: crypto.randomUUID(),
@@ -59,4 +59,75 @@ export const NewMovies = [
       },
     ],
   },
+  // ====================================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 7.9,
+    year: 2014,
+    language: "Hindi, English",
+    Genres: " Action ,Adventure ,Sci-Fi, War",
+    name: "Edge of Tomorrow",
+    banner:
+      "https://fansided.com/files/2014/04/Edge-of-Tomorrow-Poster-Crop.jpg",
+    image:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRKm8olhDSmCSgZ65A86mwpRQkVaGo0NH9zNXSRHXW4d5N7eHpu",
+    url: "https://adblocktape.store/v/0RAM18Lly4Hb9aM/Edge_of_Tomorrow_%282014%29_%28BluRay%29_%28PC_HD_Full_Movie%29.mp4",
+    synopsis:
+      " An alien race has hit the Earth in an unrelenting assault, unbeatable by any military unit in the world. Major William Cage (Cruise) is an officer who has never seen a day of combat when he is unceremoniously dropped into what amounts to a suicide mission. Killed within minutes, Cage now finds himself inexplicably thrown into a time loop-forcing him to live out the same brutal combat over and over, fighting and dying again...and again. But with each battle, Cage becomes able to engage the adversaries with increasing skill, alongside Special Forces warrior Rita Vrataski (Blunt). And, as Cage and Vrataski take the fight to the aliens, each repeated encounter gets them one step closer to defeating the enemy!",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRezb3QSPGhLptNSXoqUpKeVofpNCTLPXOG9n9o3Z2bnMp80f2AimK17SPKLa2PPkqsYkqIUAHfDgZFTs0",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcR6qJpkd88cKY450EDoWqof8MkDcoLoWQZWyxmxLOYpCHI-vYHKNVLVLqGEd33W6rOMDWAJgr4Wuefpqoc",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQUPldSQ0FY7VxhdtF1eDYHp__Y1K1BK8C7iMa9SgkXarK9RWHF49BRdfQm42qnBLcZGRoHnPrdpKm6HKU",
+      },
+    ],
+  },
+  // ====================================================================================
+  // ====================================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 3.8,
+    year: 2022,
+    language: "Hindi",
+    Genres: " Action ,Drama",
+    name: "Acharya(HINDI)",
+    banner:"https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/acharya_release_date.jpg",
+    image:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBSiWPHqUp8XHk3cPE3LtlUaLcfWnSNWOWntLuHY98Bg_wsN2f",
+    url:"https://adblocktape.store/v/gqpW1qK6BphqMDr/Acharya.2022.720p.HEVC.WEB-DL.Hindi.HQ-Dub.x265-Vegamovies.NL.mkv.mp4",
+    synopsis:
+      " Touted to be a socio-political actioner, the plot revolves around a middle-aged Naxalite-turned-social reformer who launches a fight against the Endowments Department over misappropriation of temple funds and donations.    ",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:"https://upload.wikimedia.org/wikipedia/commons/4/4b/Ram_Charan_promoting_Zanjeer.jpg"
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSHTGlSeeVm4XbOFlLRelSIb_74fDVNSRopt2FWlfjTF3kuxbM1HVREpYDp9h3ESrf3wxy3nuk9F76DlI4",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRUSveaqqqnYYxyG-E1AEYy7RwVX7z-uUg6vG69mwv5P1RMsSw7cgpY81d1Wc96v3_huxJOp7cv6D_0Hww",
+      },
+    ],
+  },
+  // ====================================================================================
 ];

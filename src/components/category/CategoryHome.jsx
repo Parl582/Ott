@@ -14,6 +14,8 @@ const CategoryHome = ({ data, catName }) => {
     catName,
   };
 
+
+
   useEffect(() => {
     const ScrollTo = () => {
       window.scrollTo({
@@ -27,11 +29,11 @@ const CategoryHome = ({ data, catName }) => {
 
   return (
     <>
-      <div className="w-full text-white  relative cat_scroll_hide py-5">
+      <div className="w-full text-white  relative cat_scroll_hide py-1">
         {/* categoryName */}
         <div className="flex justify-between items-center">
           <span className="flex items-center space-x-1">
-            <h2 className="font-bold md:text-[1.8rem] text-[1.3rem] rounded-sm ">
+            <h2 className="font-bold md:text-[1.3rem] text-[1rem] rounded-sm md:px-2 px-1  ">
               {catName}
             </h2>
             <span className="material-symbols-outlined mt-1 font-bold">
@@ -58,7 +60,7 @@ const CategoryHome = ({ data, catName }) => {
         <div className="absolute  justify-between w-[100%] center_absolute md:flex hidden">
           <button
             onClick={() => scroll(-500)}
-            className="w-[50px] h-[50px] rounded-full bg-transparent border-2 flex items-center justify-center"
+            className="w-[50px] h-[50px] rounded-full bg-transparent border-[1px] border-[#ccc] flex items-center justify-center"
           >
             <span className="material-symbols-outlined text-[40px]">
               arrow_left
@@ -66,7 +68,7 @@ const CategoryHome = ({ data, catName }) => {
           </button>
           <button
             onClick={() => scroll(500)}
-            className="w-[50px] h-[50px] rounded-full bg-transparent border-2 flex items-center justify-center "
+            className="w-[50px] h-[50px] rounded-full bg-transparent border-[1px] border-[#ccc] flex items-center justify-center "
           >
             <span className="material-symbols-outlined text-[40px]">
               arrow_right

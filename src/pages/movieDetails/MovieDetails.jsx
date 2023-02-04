@@ -26,6 +26,7 @@ const MovieDetails = () => {
             <LabTabs movieDetails={details} />
           </div>
         </div>
+      
       </div>
     </>
   );

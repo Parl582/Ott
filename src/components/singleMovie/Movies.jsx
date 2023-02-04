@@ -16,7 +16,7 @@ const Movies = ({ elm }) => {
 
   return (
     <>
-      <div className="md:min-w-[310px] md:w-[310px] w-[210px]  min-w-[210px]  movies_card   relative cursor-pointer overflow-hidden rounded-sm p-2 py-3 ">
+      <div className="md:min-w-[220px] md:w-[220px] w-[160px]  min-w-[160px]  movies_card   relative cursor-pointer overflow-hidden md:rounded-sm md:px-2 px-1 py-3 ">
         <div className="movie_hover relative ">
           <img
             title={elm.name}
@@ -24,9 +24,9 @@ const Movies = ({ elm }) => {
             onClick={() => ViewDetails()}
             src={elm?.image}
             alt=""
-            className="w-full md:h-[200px] h-[210px] object-cover object rounded-sm "
+            className="w-full md:h-[300px] h-[210px] object-cover object "
           />
-          <div className="absolute w-full md:h-[50%] h-[70%] bottom-0  hover_show_details  overlayer_movie_details">
+          <div className="absolute flex items-center justify-end flex-col pb-3 w-full md:h-[50%] h-[70%] bottom-0  hover_show_details  overlayer_movie_details">
             <p className="flex  px-6 items-center text-[#f8ea9b] space-x-1">
               <span className="material-symbols-outlined">star_half</span>
               <span className="font-medium text-[1.5rem]">{elm.rating}</span>
@@ -34,16 +34,16 @@ const Movies = ({ elm }) => {
                 (IMdb)
               </span>
             </p>
-            <div className="flex items-center justify-between px-6 md:flex-none flex-wrap md:space-y-0 space-y-1">
+            <div className="flex items-center flex-col justify-center w-full px-4 space-y-2">
               <button
-                className=" text-white flex items-center  py-1 px-4 space-x-1 play_btn rounded-sm md:w-auto w-full justify-center"
+                className=" text-white flex items-center  py-1 space-x-1 play_btn  w-full justify-center"
                 onClick={handlePlay}
               >
                 <span className="material-symbols-outlined">play_circle</span>
                 <span className=" text-[0.8rem]">Watch</span>
               </button>
               <button
-                className=" text-white flex items-center   px-4 space-x-1 border-2 md:py-[2px] border-[#b0b0b0]  rounded-sm  md:w-auto w-full justify-center"
+                className=" text-white flex items-center   space-x-1 border-[1px] md:py-[2px] border-[#b0b0b0]  w-full justify-center"
                 onClick={handleList}
               >
                 <span className="material-symbols-outlined">add</span>
@@ -52,15 +52,15 @@ const Movies = ({ elm }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between mt-3 items-center px-2 w-full">
+        <div className="flex justify-between mt-3 items-center md:px-2 px-1 w-full">
           {/* <p className="font-normal text-[1.3rem]">{elm?.jawSummary?.title} </p> */}
           <p
-            className="font-normal text-[1.3rem] w-full truncate"
+            className="font-normal md:text-[1.1rem] text-[13px] w-full truncate"
             title={elm.name}
           >
             {elm.name}{" "}
           </p>
-          <span className="text-[#a2a2a2] text-[0.9rem]">Free</span>
+          <span className="text-[#a2a2a2] text-[0.8rem]">Free</span>
         </div>
       </div>
     </>

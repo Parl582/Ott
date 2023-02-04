@@ -42,7 +42,7 @@ export const Adsbanner = [
     year: 2023,
     language: "Hindi, English",
     Genres: "Action, Adventure, Drama, Fantasy, Sci-FiThriller",
-    name: "Black Panther: Wakanda Forever (2022) iMAX Dual Audio [Hindi DD 5.1-English]",
+    name: "Black Panther: Wakanda Forever (2022) ",
     banner: require("../IMG/blackpanther2023/banner.jpg"),
     image: require("../IMG/blackpanther2023/black2023.jpg"),
     url: "https://adblocktape.store/v/VOaDrM8pKOTK7L9/%5BAllMoviesHub.Day%5D-Black.Panther.Wakanda.Forever.2022.720p.IMAX.WEB-DL.HIN-ENG.x264.mkv.mp4",
