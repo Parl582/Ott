@@ -1,4 +1,115 @@
 export const NewMovies = [
+    // ====================================================================================
+    {
+      id: crypto.randomUUID(),
+      rating: 6.2,
+      year: 2023,
+      language: "Hindi",
+      Genres: " Action, Drama",
+      name: "Enemy 2023 ",
+      banner:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZyuyHBNyZn6_ILXwKTOpEr_rWVM1gbkioWZUFyPrrNds1A_AnW1keiIvduuFSkhF7vQ&usqp=CAU",
+      image:
+        "https://m.media-amazon.com/images/M/MV5BM2JlNzM1NDEtOWFmYS00NWJmLThkNmMtNjYzN2YwYmFiN2E3XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
+      url: "https://adblocktape.store/v/vo0rYyjxLqT4g9R",
+      synopsis:
+        "It's the story of two childhood friends and their escalating competitive nature. To what extent are they ready to go?",
+      mainCast: [
+        {
+          id: crypto.randomUUID(),
+  
+          castImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMjeBDq5tbZ57zTKfP1O9-jXiGafXt6LyZ_kzv6zGS-7UBcECe",
+        },
+        {
+          id: crypto.randomUUID(),
+  
+          castImg:
+            "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTgwMGmqAcM5eGItUboHVfZHJwS1tjzGBIy5xXPLLNe3aJbQpoC",
+        },
+        {
+          id: crypto.randomUUID(),
+  
+          castImg:
+            "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR987XRGpbZcHxRDKKfVq3rtM7xWdkugci8gdXnA6ku_atWcDwZ",
+        },
+      ],
+    },
+    //  =============================================================
+  // ====================================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 6.7,
+    year: 2023,
+    language: "Hindi",
+    Genres: " Action, Drama",
+    name: "Varisu(2023) ",
+    banner:
+      "https://tiketapasa.com/wp-content/uploads/2022/12/Varisu-Movie.jpg",
+    image:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyWwOs-p9xzXUkgeGuWpAyuI3_tGIN33TzvSUrp2hTa-32OLFG",
+    url: "https://adblocktape.store/v/W9VgpMeapPsbwo6/Varisu.2023.Dual.Audio.Hindi.Cleaned-Tamil.HDRip.720p.mkv.mp4",
+    synopsis:
+      "Varisu is an action-suspense thriller movie. The story begins with a big family living together happily, and they have a very big company in which everyone manages the business together. Then suddenly a man enters. This creates a lot of problems in the business; there was a huge loss in the business, and the family gets separated. How does loss happen in business? Why does the family get separated? This suspense remains.",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT_6cPM-f3OCAnd4WnXiwC3TNBv0bEYnS_Lb1P4euacXMfsNjW_",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRKx8DeyfgyNUR--S74z_5f0zFMNhJ3cdpXvKZjvLOnPGy-Oe3t7cY0tlN2vL68mkD6oQ0w-klevboekXU",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "https://www.celebrityhow.com/wp-content/uploads/2019/01/Jayasudha.jpg",
+      },
+    ],
+  },
+  //  ==========================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 3.8,
+    year: 2022,
+    language: "Hindi",
+    Genres: " Action ,Drama",
+    name: "Acharya(HINDI)",
+    banner:
+      "https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/acharya_release_date.jpg",
+    image:
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBSiWPHqUp8XHk3cPE3LtlUaLcfWnSNWOWntLuHY98Bg_wsN2f",
+    url: "https://adblocktape.store/v/gqpW1qK6BphqMDr/Acharya.2022.720p.HEVC.WEB-DL.Hindi.HQ-Dub.x265-Vegamovies.NL.mkv.mp4",
+    synopsis:
+      " Touted to be a socio-political actioner, the plot revolves around a middle-aged Naxalite-turned-social reformer who launches a fight against the Endowments Department over misappropriation of temple funds and donations.    ",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "https://upload.wikimedia.org/wikipedia/commons/4/4b/Ram_Charan_promoting_Zanjeer.jpg",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSHTGlSeeVm4XbOFlLRelSIb_74fDVNSRopt2FWlfjTF3kuxbM1HVREpYDp9h3ESrf3wxy3nuk9F76DlI4",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRUSveaqqqnYYxyG-E1AEYy7RwVX7z-uUg6vG69mwv5P1RMsSw7cgpY81d1Wc96v3_huxJOp7cv6D_0Hww",
+      },
+    ],
+  },
+  // ====================================================================================
+
   {
     id: crypto.randomUUID(),
     rating: 7.3,
@@ -97,37 +208,5 @@ export const NewMovies = [
   },
   // ====================================================================================
   // ====================================================================================
-  {
-    id: crypto.randomUUID(),
-    rating: 3.8,
-    year: 2022,
-    language: "Hindi",
-    Genres: " Action ,Drama",
-    name: "Acharya(HINDI)",
-    banner:"https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/acharya_release_date.jpg",
-    image:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBSiWPHqUp8XHk3cPE3LtlUaLcfWnSNWOWntLuHY98Bg_wsN2f",
-    url:"https://adblocktape.store/v/gqpW1qK6BphqMDr/Acharya.2022.720p.HEVC.WEB-DL.Hindi.HQ-Dub.x265-Vegamovies.NL.mkv.mp4",
-    synopsis:
-      " Touted to be a socio-political actioner, the plot revolves around a middle-aged Naxalite-turned-social reformer who launches a fight against the Endowments Department over misappropriation of temple funds and donations.    ",
-    mainCast: [
-      {
-        id: crypto.randomUUID(),
-
-        castImg:"https://upload.wikimedia.org/wikipedia/commons/4/4b/Ram_Charan_promoting_Zanjeer.jpg"
-      },
-      {
-        id: crypto.randomUUID(),
-
-        castImg:
-          "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSHTGlSeeVm4XbOFlLRelSIb_74fDVNSRopt2FWlfjTF3kuxbM1HVREpYDp9h3ESrf3wxy3nuk9F76DlI4",
-      },
-      {
-        id: crypto.randomUUID(),
-
-        castImg:
-          "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRUSveaqqqnYYxyG-E1AEYy7RwVX7z-uUg6vG69mwv5P1RMsSw7cgpY81d1Wc96v3_huxJOp7cv6D_0Hww",
-      },
-    ],
-  },
-  // ====================================================================================
+ 
 ];

@@ -1,4 +1,78 @@
 export const Movies = [
+  // ====================================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 6.7,
+    year: 2023,
+    language: "Hindi",
+    Genres: " Action, Drama",
+    name: "Varisu(2023) ",
+    banner:
+      "https://tiketapasa.com/wp-content/uploads/2022/12/Varisu-Movie.jpg",
+    image:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyWwOs-p9xzXUkgeGuWpAyuI3_tGIN33TzvSUrp2hTa-32OLFG",
+    url: "https://adblocktape.store/v/W9VgpMeapPsbwo6/Varisu.2023.Dual.Audio.Hindi.Cleaned-Tamil.HDRip.720p.mkv.mp4",
+    synopsis:
+      "Varisu is an action-suspense thriller movie. The story begins with a big family living together happily, and they have a very big company in which everyone manages the business together. Then suddenly a man enters. This creates a lot of problems in the business; there was a huge loss in the business, and the family gets separated. How does loss happen in business? Why does the family get separated? This suspense remains.",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT_6cPM-f3OCAnd4WnXiwC3TNBv0bEYnS_Lb1P4euacXMfsNjW_",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRKx8DeyfgyNUR--S74z_5f0zFMNhJ3cdpXvKZjvLOnPGy-Oe3t7cY0tlN2vL68mkD6oQ0w-klevboekXU",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "https://www.celebrityhow.com/wp-content/uploads/2019/01/Jayasudha.jpg",
+      },
+    ],
+  },
+  //  ==========================================================================
+  // ====================================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 6.2,
+    year: 2023,
+    language: "Hindi",
+    Genres: " Action, Drama",
+    name: "Enemy 2023 ",
+    banner:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZyuyHBNyZn6_ILXwKTOpEr_rWVM1gbkioWZUFyPrrNds1A_AnW1keiIvduuFSkhF7vQ&usqp=CAU",
+    image:
+    "https://m.media-amazon.com/images/M/MV5BM2JlNzM1NDEtOWFmYS00NWJmLThkNmMtNjYzN2YwYmFiN2E3XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
+    url: "https://adblocktape.store/v/vo0rYyjxLqT4g9R",
+    synopsis:
+    "It's the story of two childhood friends and their escalating competitive nature. To what extent are they ready to go?",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMjeBDq5tbZ57zTKfP1O9-jXiGafXt6LyZ_kzv6zGS-7UBcECe"
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTgwMGmqAcM5eGItUboHVfZHJwS1tjzGBIy5xXPLLNe3aJbQpoC"
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+        "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR987XRGpbZcHxRDKKfVq3rtM7xWdkugci8gdXnA6ku_atWcDwZ"
+      },
+    ],
+  },
+  //  ==========================================================================
   {
     id: crypto.randomUUID(),
     rating: 7.3,
@@ -133,5 +207,41 @@ export const Movies = [
       },
     ],
   },
-  //  ==========================================================================
+  // ====================================================================================
+  {
+    id: crypto.randomUUID(),
+    rating: 6.1,
+    year: 2022,
+    language: "English",
+    Genres: " Horror, Thriller",
+    name: "Sick(2022)",
+    banner:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ29h1XOY0NIh8xnPF2vDmuLlERKKgLe9EropdAEhg4cnkYOhahlxLOZ6-KIPff1IBbFQo&usqp=CAU",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BOTliNDE4ODQtODg3Zi00MGIwLWIwZmItNjQ0YjEzMjdiMWEyXkEyXkFqcGdeQXVyMjY5ODI4NDk@._V1_FMjpg_UX1000_.jpg",
+    url:
+    "https://adblocktape.store/v/KGrvwqomvQT0kJj",
+    synopsis:
+      "In April 2020 during the COVID-19 pandemic, college student Parker Mason takes her best friend, Miri Woodlow, to her family's lake house to quarantine her. They arrive at the luxurious and secluded lake house when Parker receives a cryptic text message. The girls head to a small dock to get a tan and Parker receives another message that unnerves them both. From that moment on, all the tranquility they were looking for turns into a fight for their survival",
+    mainCast: [
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQyuOMYFjGLmjegnj93JqCdZfwGNp3DFIQz_lTDdwYJrlMd0sOS-G7oFTbr2EdmuwSYgDwE4jsxuAc0C98",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQnGsdUj-oJk7MaIWfKIRrVGc4tqj5v6LRcLQIYHMdpn4neeqcRPsNYhfAfPtIF7yYddNnVJs_Ongak09M",
+      },
+      {
+        id: crypto.randomUUID(),
+
+        castImg:
+          "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQvot7mil6MI4A5QUwftgMDm-cox93xwmXGK3m3tsSAO999Vu4LHkhUxEay6Tg-UpmxwQPrM_DOEOroDGE",
+      },
+    ],
+  },
 ];
