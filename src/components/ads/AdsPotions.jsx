@@ -12,7 +12,7 @@ const AdsPortions = ({ movieDetails }) => {
 
   return (
     <>
-      <div className="w-full  md:h-[500px] h-[320px] overflow-clip">
+      <div className="w-full  md:h-[500px] h-[350px] overflow-clip">
         <div className="w-full h-full relative ">
           <img
             src={

@@ -5,11 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import { CategoryName } from "../../data/categoryName";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
-export default function AccountMenu({anchorEl,setAnchorEl, handleChange}) {
- 
-  const navigate = useNavigate();
+export default function AccountMenu({ anchorEl, setAnchorEl, handleChange }) {
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -17,22 +15,7 @@ export default function AccountMenu({anchorEl,setAnchorEl, handleChange}) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  // const handleChange = (elm) => {
-  //   let sendData = {
-  //     data: null,
-  //     catName: null,
-  //   };
-  //   if (elm.name === "Recent") {
-  //     sendData.data = NewMovies;
-  //     sendData.catName = elm.name;
-  //   } else {
-  //     sendData.data = Movies;
-  //     sendData.catName = elm.name;
-  //   }
 
-  //   setAnchorEl(null);
-  //   navigate(`/list-all/${elm.name}`, { state: sendData });
-  // };
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>

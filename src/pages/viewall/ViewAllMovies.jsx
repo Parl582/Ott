@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import {  useNavigate } from "react-router-dom";
 
 const ViewAllMovies = ({ allMovies, location }) => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const ViewAllMovies = ({ allMovies, location }) => {
       navigate(`/details/${elm.id}`, { state: elm });
     }
   };
+  const searchData = useSelector((state) => state.search.search);
 
   return (
     <>
@@ -29,7 +31,7 @@ const ViewAllMovies = ({ allMovies, location }) => {
             {location?.state?.catName}
           </h1>
           <div className="flex flex-wrap w-full">
-            {allMovies.map((elm) => (
+            {allMovies.filter((item)=>item.name.toLowerCase().includes(searchData.toLowerCase().trim())).map((elm) => (
               <div
                 className="lg:w-1/6 md:w-1/5 w-1/4 lg:h-[280px] md:h-[250px] h-[180px]  p-2 md:px-2 px-1 cursor-pointer"
                 key={elm.id}

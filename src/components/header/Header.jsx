@@ -4,14 +4,23 @@ import { CategoryName } from "../../data/categoryName";
 import AccountMenu from "./CategoryData";
 import { Movies } from "../../data/movies";
 import { NewMovies } from "../../data/NewMovies";
-
-
+// import { useDispatch } from "react-redux";
+// import { updateSearch } from "../../redux/userSlice";
 
 const Header = () => {
   const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const [active, setActive] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  // const [search, setSearch] = useState("");
+  // const dispatch = useDispatch();
+  // let location = useLocation();
+
+  // const SearchHandle = (e) => {
+  //   setSearch(e.target.value);
+  //   dispatch(updateSearch(search));
+  // };
+
   const handleChange = (elm) => {
     let sendData = {
       data: null,
@@ -60,33 +69,54 @@ const Header = () => {
               account_circle
             </span>
           ) : (
-            <div className="space-x-8 md:flex hidden">
-              {/* <div className=" md:w-[300px]  ">
+            <div className="flex space-x-8 items-center">
+              {/* {location.pathname !== "/" && (
+                <div className="wrapper">
+                  <div className="search">
+                    <span className="material-symbols-outlined cursor-pointer text-[33px] hide">
+                      search
+                    </span>
+                    <input
+                      placeholder="Search"
+                      type="text"
+                      onChange={SearchHandle}
+                    />
+                  </div>
+                </div>
+              )} */}
+
+              <div className="space-x-8 md:flex hidden">
+                {/* <div className=" md:w-[300px]  ">
                       <input
                         type="text"
                         className="w-full px-4 py-1 rounded-full bg-transparent border-2 border-[#292929] outline-none"
                         placeholder="Search"
                       />
                     </div> */}
-              <button
-                className="font-medium"
-                onClick={() => navigate("/login")}
-              >
-                Log in
-              </button>
-              <button
-                className="font-medium"
-                onClick={() => navigate("/signup")}
-              >
-                Create Account
-              </button>
+                <button
+                  className="font-medium"
+                  onClick={() => navigate("/login")}
+                >
+                  Log in
+                </button>
+                <button
+                  className="font-medium"
+                  onClick={() => navigate("/signup")}
+                >
+                  Create Account
+                </button>
+              </div>
             </div>
           )}
 
           <div className="md:hidden flex space-x-3">
-            {/* <span className="material-symbols-outlined cursor-pointer text-[33px]">
-              search
-            </span> */}
+            {/* <div className="search">
+              <span className="material-symbols-outlined cursor-pointer text-[33px]">
+                search
+              </span>
+
+            </div> */}
+
             <span
               className="material-symbols-outlined cursor-pointer text-[33px]"
               onClick={() => navigate(validation ? "/" : "/login")}

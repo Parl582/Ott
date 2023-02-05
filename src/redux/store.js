@@ -23,6 +23,7 @@ const persistedReducer = persistReducer(persistConfig, userReducer);
 export const store = configureStore({
   reducer: {
     user: persistedReducer,
+    search: userReducer,
   },
   // reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>

@@ -4,8 +4,6 @@ import ViewAllMovies from "./ViewAllMovies";
 
 const AllMoviesHome = () => {
   const location = useLocation();
-  console.log(location.pathname.split("/")[1]);
-
   const allMovies = location?.state?.data;
   const finalMovies = allMovies.filter(
     (elm) =>
@@ -14,9 +12,6 @@ const AllMoviesHome = () => {
         .includes(location.state.catName.toLowerCase()) ||
       elm.Genres.toLowerCase().includes(location.state.catName.toLowerCase())
   );
-
-  //   let Pathname = location.pathname.split("/")[0]
-
   return (
     <>
       <ViewAllMovies
@@ -31,5 +26,4 @@ const AllMoviesHome = () => {
     </>
   );
 };
-
 export default AllMoviesHome;

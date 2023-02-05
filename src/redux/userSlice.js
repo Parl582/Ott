@@ -3,11 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
   name: "user",
   initialState: {
+    search: "",
     userinfo: null,
     pending: false,
     error: false,
   },
   reducers: {
+    updateSearch: (state, action) => {
+      state.search = action.payload;
+    },
     updateStart: (state) => {
       state.pending = true;
     },
@@ -28,5 +32,5 @@ export const userSlice = createSlice({
   },
 });
 
-export const { updateStart, updateSuccess, error, logout } = userSlice.actions;
+export const { updateStart, updateSuccess, error, logout,updateSearch } = userSlice.actions;
 export default userSlice.reducer;

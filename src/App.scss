@@ -89,3 +89,68 @@ iframe {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.wrapper {
+  text-align: center;
+  width: 140px;
+
+  @media screen and (min-width:768px){
+
+    margin-right: -20px;
+    width: 230px;
+  }
+ 
+}
+
+// .search {
+//   display: flex;
+//   justify-content: end;
+//   padding: 2px 5px;
+//   border-radius: 50px;
+//   margin-top: 5px;
+//   transition: 0.4s;
+// }
+
+// .search:hover {
+//   background: rgba(255, 255, 255, 0.15);
+//   transition: all 0.5;
+//   .hide{
+//     display: none;
+//   }
+// }
+
+// .search:hover input {
+//   max-width: 120px;
+//   @media screen and (min-width:768px){
+//     max-width: 180px;
+//   }
+// }
+
+// .search input {
+//   background: transparent;
+//   border: 0;
+//   max-width: 0;
+//   padding: 0;
+//   text-indent: 12px;
+//   color: #f9f9f9;
+//   font-size: 22px;
+//   font-family: "Poppins";
+//   outline: none;
+//   transition: 0.4s;
+// }
+
+// .search input::placeholder {
+//   color: rgba(255, 255, 255, 0.375);
+// }
+
+// .search span {
+//   display: grid;
+//   place-items: center;
+//   width: 30px;
+//   height: 30px; 
+//   background: #454545;
+//   color: #f9f9f9;
+//   border-radius: inherit;
+//   font-size: 20px;
+//   pointer-events: none;
+// }

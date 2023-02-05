@@ -9,14 +9,12 @@ import MovieDetails from "./pages/movieDetails/MovieDetails";
 import Player from "./pages/player/Player";
 import SignUp from "./pages/signup/SignUp";
 import AllMoviesHome from "./pages/viewall/AllMoviesHome";
-import ViewAllMovies from "./pages/viewall/ViewAllMovies";
 
 function App() {
   const Layout = () => {
     return (
       <>
         <Header />
-        <p></p>
         <Outlet />
         <Footer />
       </>

@@ -23,7 +23,7 @@ const Carousel = () => {
       >
         <>
           {data.map((elm) => (
-            <div className="w-full  md:h-[450px] h-[320px] overflow-clip">
+            <div className="w-full  md:h-[450px] h-[350px] overflow-clip">
               <AdsPortions key={elm.id} movieDetails={elm} />
             </div>
           ))}
