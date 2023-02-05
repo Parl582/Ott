@@ -43,7 +43,10 @@ export const NetflexDrama = [
           {
             id: crypto.randomUUID(),
             ep: 1,
-            url: "https://adblocktape.store/v/qWkYZByglBTzvd4",
+            // url: "https://adblocktape.store/v/qWkYZByglBTzvd4",
+            url: "https://dood.yt/e/h6srq5vouc39b66n6m1qj8bvsy8vd5x3",
+            // url: "https://short.ink/QFolDUwcA8",
+            // url: "https://streama2z.xyz/embed-bvbgk7sfzwqh.html",
           },
           {
             id: crypto.randomUUID(),
