@@ -1,19 +1,35 @@
 import React, { useState } from "react";
-
 import { Link, useNavigate } from "react-router-dom";
 import { CategoryName } from "../../data/categoryName";
 import AccountMenu from "./CategoryData";
+import { Movies } from "../../data/movies";
+import { NewMovies } from "../../data/NewMovies";
 
-// import logo from '../../IMG/logo.jpg'
+
 
 const Header = () => {
   const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const [active, setActive] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleChange = (elm) => {
+    let sendData = {
+      data: null,
+      catName: null,
+    };
+    if (elm.name === "Recent") {
+      sendData.data = NewMovies;
+      sendData.catName = elm.name;
+    } else {
+      sendData.data = Movies;
+      sendData.catName = elm.name;
+    }
 
-  const handleCategory = (name) => {
-    setClick(!click);
+    setAnchorEl(null);
+    setClick(false);
+    navigate(`/list-all/${elm.name}`, { state: sendData });
   };
+
   const Logout = () => {
     localStorage.removeItem("userToken");
     navigate("/");
@@ -29,7 +45,11 @@ const Header = () => {
               FlixTv
             </Link>
             <div className="cursor-pointer md:flex hidden items-center ">
-              <AccountMenu />
+              <AccountMenu
+                setAnchorEl={setAnchorEl}
+                anchorEl={anchorEl}
+                handleChange={handleChange}
+              />
             </div>
           </div>
           {validation ? (
@@ -112,7 +132,7 @@ const Header = () => {
                 <li
                   className="list-none flex items-center space-x-2 py-2 px-2  w-1/3 min-w-[90px] h-[100px] "
                   key={elm.id}
-                  onClick={() => handleCategory(elm.name)}
+                  onClick={() => handleChange(elm)}
                 >
                   <div className="w-full border-[1px] border-[#474747] rounded-md h-full relative">
                     <img

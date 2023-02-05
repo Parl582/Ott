@@ -8,6 +8,7 @@ import Login from "./pages/login/LogIn";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
 import Player from "./pages/player/Player";
 import SignUp from "./pages/signup/SignUp";
+import AllMoviesHome from "./pages/viewall/AllMoviesHome";
 import ViewAllMovies from "./pages/viewall/ViewAllMovies";
 
 function App() {
@@ -15,9 +16,7 @@ function App() {
     return (
       <>
         <Header />
-        <p>
-          
-        </p>
+        <p></p>
         <Outlet />
         <Footer />
       </>
@@ -39,7 +38,11 @@ function App() {
         },
         {
           path: "/view-all/:id",
-          element: <ViewAllMovies />,
+          element: <AllMoviesHome />,
+        },
+        {
+          path: "/list-all/:id",
+          element: <AllMoviesHome />,
         },
       ],
     },

@@ -27,10 +27,10 @@ const Player = () => {
             />
           </div>
         )}
-
         <iframe
           title="Movies"
           src={url}
+          autoplay
           width="100%"
           height="100%"
           allowFullscreen

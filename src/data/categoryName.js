@@ -1,7 +1,7 @@
 export const CategoryName = [
   {
     id: crypto.randomUUID(),
-    name: "Recent Upload",
+    name: "Recent",
     img: require("../IMG/Category/recent.png"),
   },
   {

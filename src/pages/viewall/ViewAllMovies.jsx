@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const ViewAllMovies = () => {
+const ViewAllMovies = ({ allMovies, location }) => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const allMovies = location?.state?.data;
+
   useEffect(() => {
     const ScrollTo = () => {
       window.scrollTo({

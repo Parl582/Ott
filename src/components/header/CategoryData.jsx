@@ -5,8 +5,11 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import { CategoryName } from "../../data/categoryName";
-export default function AccountMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+import { useNavigate } from "react-router-dom";
+
+export default function AccountMenu({anchorEl,setAnchorEl, handleChange}) {
+ 
+  const navigate = useNavigate();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -14,6 +17,22 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // const handleChange = (elm) => {
+  //   let sendData = {
+  //     data: null,
+  //     catName: null,
+  //   };
+  //   if (elm.name === "Recent") {
+  //     sendData.data = NewMovies;
+  //     sendData.catName = elm.name;
+  //   } else {
+  //     sendData.data = Movies;
+  //     sendData.catName = elm.name;
+  //   }
+
+  //   setAnchorEl(null);
+  //   navigate(`/list-all/${elm.name}`, { state: sendData });
+  // };
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
@@ -81,7 +100,7 @@ export default function AccountMenu() {
                 <div
                   className="w-1/2 lg:p-5 p-2  md:h-[140px] h-[80px] "
                   key={elm.id}
-                  onClick={handleClose}
+                  onClick={() => handleChange(elm)}
                 >
                   <div className="border-[1px] border-[#434343] w-full h-full  relative rounded-md overflow-hidden">
                     <img
