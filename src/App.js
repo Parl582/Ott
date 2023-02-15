@@ -43,10 +43,10 @@ function App() {
           path: "/list-all/:id",
           element: <AllMoviesHome />,
         },
-        {
-          path: "/add",
-          element: <AddMovies />,
-        },
+        // {
+        //   path: "/add",
+        //   element: <AddMovies />,
+        // },
       ],
     },
     {

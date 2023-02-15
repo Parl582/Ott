@@ -4,12 +4,13 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import AdsPortions from "./AdsPotions";
 import { Adsbanner } from "../../data/FontRowBanner";
-// import topBanner from "../img/topbanner.jpg";
+import { useSelector } from "react-redux";
 
 const Carousel = () => {
-  const data = Adsbanner;
+  const data = useSelector((state) => state.movies.movies);
+  let nNo = Math.floor(Math.random() * 10);
+  let nNo1 = Math.floor(Math.random() * 10);
 
-  console.log(data);
   return (
     <>
       <OwlCarousel
@@ -22,11 +23,20 @@ const Carousel = () => {
         loop={true}
       >
         <>
-          {data.map((elm) => (
-            <div className="w-full  md:h-[450px] h-[350px] overflow-clip">
-              <AdsPortions key={elm.id} movieDetails={elm} />
+          {data ? (
+            <>
+              <div className="w-full  md:h-[450px] h-[350px] overflow-clip">
+                <AdsPortions movieDetails={data[nNo]} />
+              </div>
+              <div className="w-full  md:h-[450px] h-[350px] overflow-clip">
+                <AdsPortions movieDetails={data[nNo1]} />
+              </div>
+            </>
+          ) : (
+            <div className="w-[104%]  md:h-[450px] h-[350px] overflow-clip">
+              <AdsPortions movieDetails={Adsbanner[0]} />
             </div>
-          ))}
+          )}
         </>
       </OwlCarousel>
       ;

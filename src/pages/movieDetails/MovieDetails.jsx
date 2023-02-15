@@ -7,6 +7,8 @@ const MovieDetails = () => {
   let location = useLocation();
 
   const details = location.state;
+
+
   useEffect(() => {
     const ScrollTo = () => {
       window.scrollTo({

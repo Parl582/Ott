@@ -2,19 +2,21 @@ import { Movies } from "./movies";
 import { NetflexDrama } from "./netflixDrama";
 import { NewMovies } from "./NewMovies";
 
+// const AllMovies = useSelector((state)=>state.movies.movies)
+
 export const MainCat = [
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     name: "Recent Updates",
     data: NewMovies,
   },
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     name: "Movies",
     data: Movies,
   },
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     name: "Netflix Drama",
     data: NetflexDrama,
   },

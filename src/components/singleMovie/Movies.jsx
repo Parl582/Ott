@@ -1,18 +1,20 @@
 import { useNavigate } from "react-router-dom";
 
 const Movies = ({ elm }) => {
+
+
   const navigate = useNavigate();
   const ViewDetails = () => {
-    if (elm.id) {
-      navigate(`/details/${elm.id}`, { state: elm });
+    if (elm._id) {
+      navigate(`/details/${elm._id}`, { state: elm });
     }
   };
   const handlePlay = () => {
-    if (elm.id) {
+    if (elm._id) {
       if (elm.sessions) {
-        navigate(`/details/${elm.id}`, { state: elm });
+        navigate(`/details/${elm._id}`, { state: elm });
       } else {
-        navigate(`/watch/${elm.id}`, { state: elm.url });
+        navigate(`/watch/${elm._id}`, { state: elm.url });
       }
     }
   };
@@ -58,12 +60,12 @@ const Movies = ({ elm }) => {
         </div>
         <div className="flex justify-between mt-3 items-center md:px-2 px-1 w-full">
           {/* <p className="font-normal text-[1.3rem]">{elm?.jawSummary?.title} </p> */}
-          <p
+          <h1
             className="font-normal md:text-[1.1rem] text-[13px] w-full truncate"
             title={elm.name}
           >
             {elm.name}{" "}
-          </p>
+          </h1>
           <span className="text-[#a2a2a2] text-[0.8rem]">Free</span>
         </div>
       </div>

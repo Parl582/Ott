@@ -1,44 +1,38 @@
 // import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
+import { Adsbanner } from "../../data/FontRowBanner";
 
 const AdsPortions = ({ movieDetails }) => {
   const navigate = useNavigate();
   const handlePlay = () => {
     if (movieDetails?.url) {
-      navigate(`/watch/${movieDetails?.id}`, { state: movieDetails?.url });
+      navigate(`/watch/${movieDetails?._id}`, { state: movieDetails?.url });
     }
   };
+
 
   return (
     <>
       <div className="w-full  md:h-[500px] h-[350px] overflow-clip">
         <div className="w-full h-full relative ">
           <img
-            src={
-              movieDetails?.banner !== undefined
-                ? movieDetails?.banner
-                : "https://6.vikiplatform.com/image/f4db244000c2470e9e1cdb608055007c.jpg?x=b&a=0x0"
-            }
+            src={movieDetails?.banner !== undefined ? movieDetails.banner : Adsbanner[0].banner}
             alt=""
             className="w-full h-full object-cover "
           />
           <div className="absolute left-0 bottom-0 h-full w-[calc(100%-10%)] md:pl-[70px] pl-4 overlayer">
             <div className=" h-full pt-[5%] space-y-3 w-[70%] text-white">
               <h1 className="text-white font-normal md:text-[30px] text-[1.3rem] onlyLimitedLine">
-                {movieDetails?.name !== undefined
-                  ? movieDetails?.name
-                  : "Movie Name"}
+                {movieDetails?.name !== undefined ? movieDetails.name : Adsbanner[0].name}
               </h1>
               <p className="text-white font-thin flex items-center space-x-2">
                 <span className="px-3  bg-[#02161a] rounded-sm">
-                  {" "}
-                  {movieDetails?.year}{" "}
+                  {movieDetails?.year !== undefined ? movieDetails.year : Adsbanner[0].year}
                 </span>
                 <span>|</span>
                 <span className="px-3  bg-[#021316] rounded-sm">
-                  {" "}
-                  {movieDetails?.language}{" "}
+                  {movieDetails?.language !== undefined ? movieDetails.language : Adsbanner[0].language}
                 </span>
               </p>
 
@@ -48,7 +42,7 @@ const AdsPortions = ({ movieDetails }) => {
                   {movieDetails?.mainCast?.map((elm) => (
                     <div
                       className="w-[55px] rounded-sm h-[55px] overflow-hidden"
-                      key={elm.id}
+                      key={elm._id}
                     >
                       <img
                         src={elm.castImg}

@@ -17,8 +17,8 @@ const ViewAllMovies = ({ allMovies, location }) => {
   }, []);
 
   const ViewDetails = (elm) => {
-    if (elm.id) {
-      navigate(`/details/${elm.id}`, { state: elm });
+    if (elm._id) {
+      navigate(`/details/${elm._id}`, { state: elm });
     }
   };
   const searchData = useSelector((state) => state.search.search);
@@ -34,7 +34,7 @@ const ViewAllMovies = ({ allMovies, location }) => {
             {allMovies.filter((item)=>item.name.toLowerCase().includes(searchData.toLowerCase().trim())).map((elm) => (
               <div
                 className="lg:w-1/6 md:w-1/5 w-1/4 lg:h-[280px] md:h-[250px] h-[180px]  p-2 md:px-2 px-1 cursor-pointer"
-                key={elm.id}
+                key={elm._id}
               >
                 <div
                   className="w-full h-full border-[1px]  border-[#ccc]  bg-[black]  movie_hover"

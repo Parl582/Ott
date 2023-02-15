@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import ViewAllMovies from "./ViewAllMovies";
-
 const AllMoviesHome = () => {
   const location = useLocation();
   const allMovies = location?.state?.data;

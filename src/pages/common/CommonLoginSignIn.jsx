@@ -24,7 +24,6 @@ const CommonLoginSignUp = ({ forgotNeed, userName }) => {
   const [userInfo, setUserInfo] = useState({});
   const dispatch = useDispatch();
   const info = useSelector((state) => state.user.userinfo);
-  console.log(info);
 
   const infohandle = (e) => {
     const value = e.target.value;

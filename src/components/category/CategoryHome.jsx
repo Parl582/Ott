@@ -1,20 +1,24 @@
 import React, { useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Movies from "../singleMovie/Movies";
 
-const CategoryHome = ({ data, catName }) => {
+const CategoryHome = ({ data,catName }) => {
   const navigate = useNavigate();
   const ref = useRef(null);
+
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
+
+
+
+
 
   const alldata = {
     data,
     catName,
   };
-
-
 
   useEffect(() => {
     const ScrollTo = () => {
@@ -43,7 +47,7 @@ const CategoryHome = ({ data, catName }) => {
           <span
             className="cursor-pointer flex items-center space-x-1"
             type="button"
-            onClick={() => navigate("/view-all/5353", { state: alldata })}
+            onClick={() => navigate(`/view-all/${catName}`, { state: alldata })}
           >
             <h2>View All</h2>
             <span className="material-symbols-outlined">expand_more</span>
@@ -54,7 +58,7 @@ const CategoryHome = ({ data, catName }) => {
           ref={ref}
         >
           {data?.map((elm) => (
-            <Movies elm={elm} key={elm.id} />
+            <Movies elm={elm} key={elm._id} />
           ))}
         </div>
         <div className="absolute  justify-between w-[100%] center_absolute md:flex hidden">

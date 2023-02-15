@@ -1,7 +1,7 @@
 export const Movies = [
   // ====================================================================================
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 6.7,
     year: 2023,
     language: "Hindi",
@@ -16,19 +16,19 @@ export const Movies = [
       "Varisu is an action-suspense thriller movie. The story begins with a big family living together happily, and they have a very big company in which everyone manages the business together. Then suddenly a man enters. This creates a lot of problems in the business; there was a huge loss in the business, and the family gets separated. How does loss happen in business? Why does the family get separated? This suspense remains.",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT_6cPM-f3OCAnd4WnXiwC3TNBv0bEYnS_Lb1P4euacXMfsNjW_",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRKx8DeyfgyNUR--S74z_5f0zFMNhJ3cdpXvKZjvLOnPGy-Oe3t7cY0tlN2vL68mkD6oQ0w-klevboekXU",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "https://www.celebrityhow.com/wp-content/uploads/2019/01/Jayasudha.jpg",
@@ -38,7 +38,7 @@ export const Movies = [
   //  ==========================================================================
   // ====================================================================================
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 6.2,
     year: 2023,
     language: "Hindi",
@@ -53,19 +53,19 @@ export const Movies = [
     "It's the story of two childhood friends and their escalating competitive nature. To what extent are they ready to go?",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMjeBDq5tbZ57zTKfP1O9-jXiGafXt6LyZ_kzv6zGS-7UBcECe"
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
         "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTgwMGmqAcM5eGItUboHVfZHJwS1tjzGBIy5xXPLLNe3aJbQpoC"
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
         "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR987XRGpbZcHxRDKKfVq3rtM7xWdkugci8gdXnA6ku_atWcDwZ"
@@ -74,7 +74,7 @@ export const Movies = [
   },
   //  ==========================================================================
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 7.3,
     year: 2023,
     language: "Hindi",
@@ -87,24 +87,24 @@ export const Movies = [
     Genres: "Action, Thriller",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
         name: "Shah Rukh Khan",
         castImg: require("../IMG/pathan/ShahRukhKhan.jfif"),
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
         name: "Dipika",
         castImg: require("../IMG/pathan/dipika.webp"),
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
         name: "John Abraham",
         castImg: require("../IMG/pathan/john.jfif"),
       },
     ],
   },
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 7.3,
     year: 2023,
     language: "Hindi, English",
@@ -118,17 +118,17 @@ export const Movies = [
       "Queen Ramonda, Shuri, M’Baku, Okoye, and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
         name: "Letitia Wright",
         castImg: require("../IMG/blackpanther2023/1.jfif"),
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
         name: "Lupita Nyong'o",
         castImg: require("../IMG/blackpanther2023/2.jfif"),
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
         name: "Danai Gurira",
         castImg: require("../IMG/blackpanther2023/3.jfif"),
       },
@@ -136,7 +136,7 @@ export const Movies = [
   },
   // ====================================================================================
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 7.9,
     year: 2014,
     language: "Hindi, English",
@@ -151,19 +151,19 @@ export const Movies = [
       " An alien race has hit the Earth in an unrelenting assault, unbeatable by any military unit in the world. Major William Cage (Cruise) is an officer who has never seen a day of combat when he is unceremoniously dropped into what amounts to a suicide mission. Killed within minutes, Cage now finds himself inexplicably thrown into a time loop-forcing him to live out the same brutal combat over and over, fighting and dying again...and again. But with each battle, Cage becomes able to engage the adversaries with increasing skill, alongside Special Forces warrior Rita Vrataski (Blunt). And, as Cage and Vrataski take the fight to the aliens, each repeated encounter gets them one step closer to defeating the enemy!",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRezb3QSPGhLptNSXoqUpKeVofpNCTLPXOG9n9o3Z2bnMp80f2AimK17SPKLa2PPkqsYkqIUAHfDgZFTs0",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcR6qJpkd88cKY450EDoWqof8MkDcoLoWQZWyxmxLOYpCHI-vYHKNVLVLqGEd33W6rOMDWAJgr4Wuefpqoc",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQUPldSQ0FY7VxhdtF1eDYHp__Y1K1BK8C7iMa9SgkXarK9RWHF49BRdfQm42qnBLcZGRoHnPrdpKm6HKU",
@@ -173,7 +173,7 @@ export const Movies = [
   // ====================================================================================
   // ====================================================================================
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 3.8,
     year: 2022,
     language: "Hindi",
@@ -188,19 +188,19 @@ export const Movies = [
       " Touted to be a socio-political actioner, the plot revolves around a middle-aged Naxalite-turned-social reformer who launches a fight against the Endowments Department over misappropriation of temple funds and donations.    ",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "https://upload.wikimedia.org/wikipedia/commons/4/4b/Ram_Charan_promoting_Zanjeer.jpg",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSHTGlSeeVm4XbOFlLRelSIb_74fDVNSRopt2FWlfjTF3kuxbM1HVREpYDp9h3ESrf3wxy3nuk9F76DlI4",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRUSveaqqqnYYxyG-E1AEYy7RwVX7z-uUg6vG69mwv5P1RMsSw7cgpY81d1Wc96v3_huxJOp7cv6D_0Hww",
@@ -209,7 +209,7 @@ export const Movies = [
   },
   // ====================================================================================
   {
-    id: crypto.randomUUID(),
+    _id: crypto.randomUUID(),
     rating: 6.1,
     year: 2022,
     language: "English",
@@ -225,19 +225,19 @@ export const Movies = [
       "In April 2020 during the COVID-19 pandemic, college student Parker Mason takes her best friend, Miri Woodlow, to her family's lake house to quarantine her. They arrive at the luxurious and secluded lake house when Parker receives a cryptic text message. The girls head to a small dock to get a tan and Parker receives another message that unnerves them both. From that moment on, all the tranquility they were looking for turns into a fight for their survival",
     mainCast: [
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQyuOMYFjGLmjegnj93JqCdZfwGNp3DFIQz_lTDdwYJrlMd0sOS-G7oFTbr2EdmuwSYgDwE4jsxuAc0C98",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQnGsdUj-oJk7MaIWfKIRrVGc4tqj5v6LRcLQIYHMdpn4neeqcRPsNYhfAfPtIF7yYddNnVJs_Ongak09M",
       },
       {
-        id: crypto.randomUUID(),
+        _id: crypto.randomUUID(),
 
         castImg:
           "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQvot7mil6MI4A5QUwftgMDm-cox93xwmXGK3m3tsSAO999Vu4LHkhUxEay6Tg-UpmxwQPrM_DOEOroDGE",

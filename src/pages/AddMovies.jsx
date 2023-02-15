@@ -16,7 +16,7 @@ const AddMovies = () => {
     setCastImg({ ...castImg, [e.target.name]: value });
   };
 
-  //   console.log(userInfo);
+
 
   let data = {
     ...userInfo,
@@ -35,8 +35,10 @@ const AddMovies = () => {
 
   const PostMovies = async () => {
     try {
-      let res = await axios.get("https://ott-backend-silk.vercel.app/api/movies");
-      console.log(res);
+      let res = await axios.post(`${BASE_URL}/api/movies`, data);
+      setUserInfo({});
+
+      alert("Movie add successfully");
     } catch (e) {
       console.log(e);
     }
@@ -95,7 +97,7 @@ const AddMovies = () => {
             <p className="text-[#fff] font-medium">banner</p>
             <input
               type="url"
-              name="language"
+              name="banner"
               onChange={HandleTake}
               className="p-x-3 py-2 border-2 w-full"
             />

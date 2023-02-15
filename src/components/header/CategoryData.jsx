@@ -82,7 +82,7 @@ export default function AccountMenu({ anchorEl, setAnchorEl, handleChange }) {
               {CategoryName.map((elm) => (
                 <div
                   className="w-1/2 lg:p-5 p-2  md:h-[140px] h-[80px] "
-                  key={elm.id}
+                  key={elm._id}
                   onClick={() => handleChange(elm)}
                 >
                   <div className="border-[1px] border-[#434343] w-full h-full  relative rounded-md overflow-hidden">

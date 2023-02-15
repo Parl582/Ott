@@ -11,6 +11,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import movieSlice from "./movieSlice";
 
 const persistConfig = {
   key: "root",
@@ -24,6 +25,7 @@ export const store = configureStore({
   reducer: {
     user: persistedReducer,
     search: userReducer,
+    movies: movieSlice,
   },
   // reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>

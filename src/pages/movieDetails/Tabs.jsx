@@ -17,7 +17,7 @@ export default function LabTabs({ movieDetails }) {
 
   const handlePlay = (data) => {
     if (data.url) {
-      navigate(`/watch/${data?.id}`, { state: data?.url });
+      navigate(`/watch/${data?._id}`, { state: data?.url });
     }
   };
 
@@ -109,7 +109,7 @@ export default function LabTabs({ movieDetails }) {
                   onChange={(e) => setSession(e.target.value)}
                 >
                   {movieDetails?.sessions?.map((elm, index) => (
-                    <option value={index} key={elm?.id}>
+                    <option value={index} key={elm?._id}>
                       {elm?.sNo}
                     </option>
                   ))}
@@ -119,7 +119,7 @@ export default function LabTabs({ movieDetails }) {
                     (item, index) => (
                       <div
                         className="p-1 md:min-w-[10%] min-w-1/5 md:w-[10%] w-1/5 flex items-center justify-center "
-                        key={item?.id}
+                        key={item?._id}
                       >
                         <span
                           className="w-full border-2  text-center cursor-pointer hover:text-[#000] rounded-sm hover:bg-[#ccc]"

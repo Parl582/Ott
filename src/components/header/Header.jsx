@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CategoryName } from "../../data/categoryName";
 import AccountMenu from "./CategoryData";
-import { Movies } from "../../data/movies";
+// import { Movies } from "../../data/movies";
 import { NewMovies } from "../../data/NewMovies";
+import { getMovie } from "../../redux/movieSlice";
+import { useDispatch, useSelector } from "react-redux";
 // import { useDispatch } from "react-redux";
 // import { updateSearch } from "../../redux/userSlice";
 
@@ -12,14 +14,10 @@ const Header = () => {
   const [click, setClick] = useState(false);
   const [active, setActive] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  // const [search, setSearch] = useState("");
-  // const dispatch = useDispatch();
-  // let location = useLocation();
+  const dispatch = useDispatch();
 
-  // const SearchHandle = (e) => {
-  //   setSearch(e.target.value);
-  //   dispatch(updateSearch(search));
-  // };
+  const Movies = useSelector((state)=>state.movies.movies)
+
 
   const handleChange = (elm) => {
     let sendData = {
@@ -44,6 +42,11 @@ const Header = () => {
     navigate("/");
   };
   const validation = localStorage.getItem("userToken");
+
+  useEffect(() => {
+    dispatch(getMovie());
+  }, []);
+
   return (
     <>
       {/* <div className="w-full border-2 relative"> */}
@@ -161,7 +164,7 @@ const Header = () => {
               {CategoryName?.map((elm) => (
                 <li
                   className="list-none flex items-center space-x-2 py-2 px-2  w-1/3 min-w-[90px] h-[100px] "
-                  key={elm.id}
+                  key={elm._id}
                   onClick={() => handleChange(elm)}
                 >
                   <div className="w-full border-[1px] border-[#474747] rounded-md h-full relative">
