@@ -3,6 +3,7 @@ import "./App.scss";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Homepage from "./components/homePage/Homepage";
+import AddMovies from "./pages/AddMovies";
 import ErrorPage from "./pages/error/ErrorPage";
 import Login from "./pages/login/LogIn";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
@@ -41,6 +42,10 @@ function App() {
         {
           path: "/list-all/:id",
           element: <AllMoviesHome />,
+        },
+        {
+          path: "/add",
+          element: <AddMovies />,
         },
       ],
     },

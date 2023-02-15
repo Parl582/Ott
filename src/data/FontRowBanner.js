@@ -1,5 +1,6 @@
+
 export const Adsbanner = [
-  
+
 
   {
     id: crypto.randomUUID(),
